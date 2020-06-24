@@ -256,8 +256,8 @@ for idx, e in enumerate(lst_name):
 num_images = 32153  # 32153
 sub_index = 0  # the index of ground truth instance
 for num in tqdm(range(1, num_images + 1)):
-    json_name = '/raid/bruce/tmp/tmp/pycharm_project_138/validation/annos/' + str(num).zfill(6) + '.json'
-    image_name = '/raid/bruce/tmp/tmp/pycharm_project_138/validation/image/' + str(num).zfill(6) + '.jpg'
+    json_name = '/raid/chenx/validation/annos/' + str(num).zfill(6) + '.json'
+    image_name = '/raid/chenx/validation/image/' + str(num).zfill(6) + '.jpg'
 
     if num >= 0:
         imag = Image.open(image_name)
@@ -323,6 +323,6 @@ for num in tqdm(range(1, num_images + 1)):
                         'segmentation': seg,
                     })
 
-json_name = '/raid/bruce/tmp/tmp/pycharm_project_138/deepfashion2_validation.json'
+json_name = '/raid/chenx/validation/deepfashion2_validation.json'
 with open(json_name, 'w') as f:
     json.dump(dataset, f)
